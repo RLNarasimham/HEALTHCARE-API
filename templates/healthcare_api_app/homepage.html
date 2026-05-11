@@ -1,0 +1,22 @@
+{% extends "healthcare_api_app/navbar.html" %} {% block body_block %}
+<div class="m-4">
+  <center>
+    <p class="h1 fst-italic text-success">WELCOME TO HEALTHCARE API</p>
+    <p class="h3 text-primary m-2">
+      AN API FOR STORING PATIENTS AND DOCTORS DETAILS DATA
+    </p>
+    <div class="d-grid gap-2 justify-content-md-center d-md-flex">
+      <a href="/patients/"
+        ><button class="btn btn-info">View Patients</button></a
+      >
+      <a href="/doctors/"><button class="btn btn-info">View Doctors</button></a>
+      <a href="/api/patients/"
+        ><button class="btn btn-info">Manipulate Patient Data</button></a
+      >
+      <a href="/api/doctors/"
+        ><button class="btn btn-info">Manipulate Doctor Data</button></a
+      >
+    </div>
+  </center>
+</div>
+{% endblock %}

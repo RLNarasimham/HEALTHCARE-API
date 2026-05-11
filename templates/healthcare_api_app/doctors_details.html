@@ -1,0 +1,25 @@
+{% extends "healthcare_api_app/navbar.html" %} {% block body_block %}
+<center>
+  <div class="m-4">
+    <p class="h1 text-success fst-italic">Doctors Details</p>
+    <table class="table">
+      <thead>
+        <th>Doctor Name</th>
+        <th>Doctor Specialization</th>
+        <th>No. Of Patients</th>
+        <th>Doctor Contact No</th>
+      </thead>
+      <tbody>
+        {% for d in d_data %}
+        <tr>
+          <td>{{ d.Doctor_Name }}</td>
+          <td>{{ d.Doctor_Specialization }}</td>
+          <td>{{ d.No_Of_Patients }}</td>
+          <td>{{ d.Doctor_Contact_No }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</center>
+{% endblock %}

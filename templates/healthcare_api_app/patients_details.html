@@ -1,0 +1,27 @@
+{% extends "healthcare_api_app/navbar.html" %} {% block body_block %}
+<div class="m-4">
+  <center>
+    <p class="h1 text-success fst-italic">Patients Details</p>
+    <table class="table">
+      <thead>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Patient ID</th>
+        <th scope="col">Patient Phone Number</th>
+        <th scope="col">Patient Treatment</th>
+        <th scope="col">Patient Doctor</th>
+      </thead>
+      <tbody>
+        {% for p in p_data %}
+        <tr>
+          <td>{{ p.Patient_Name }}</td>
+          <td>{{ p.Patient_ID }}</td>
+          <td>{{ p.Patient_Phone_No }}</td>
+          <td>{{ p.Patient_Treatment }}</td>
+          <td>{{ p.Patient_Doctor }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </center>
+</div>
+{% endblock %}
